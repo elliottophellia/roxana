@@ -20,8 +20,8 @@ Warm, soft, rosy-cocoa colors with creamy surfaces and peach accents.
 
 | Port | Status | Repository | Notes |
 |---|---:|---|---|
-| Discord | ✅ | [source]() | - |
-| OldTwitter | ✅ | [source]() | - |
+| Discord | ✅ | [source](/ports/discord/README.md) | - |
+| OldTwitter | ✅ | [source](/ports/oldtwitter/README.md) | - |
 
 
 ## Usage
