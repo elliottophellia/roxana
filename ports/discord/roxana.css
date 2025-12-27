@@ -1,0 +1,167 @@
+/* ===== Based on Material Discord ===== */
+
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css");
+
+:root {
+  --backgroundLight: #FFF8F6;
+  --surfaceContainerLowestLight: #FFFFFF;
+  --surfaceContainerLowLight: #FFF1ED;
+  --surfaceContainerLight: #FCEAE5;
+  --surfaceContainerHighLight: #F7E4DF;
+  --surfaceContainerHighestLight: #F1DFD9;
+
+  --primaryLight: #8F4C35;
+  --onPrimaryLight: #FFFFFF;
+
+  --secondaryLight: #77574C;
+  --onSecondaryLight: #FFFFFF;
+  --secondaryContainerLight: #FFDBCF;
+  --onSecondaryContainerLight: #2C160E;
+
+  --onSurfaceLight: #231917;
+  --outlineVariantLight: #D8C2BB;
+
+  --backgroundDark: #1A110F;
+  --surfaceContainerLowestDark: #140C0A;
+  --surfaceContainerLowDark: #231917;
+  --surfaceContainerDark: #271D1A;
+  --surfaceContainerHighDark: #322825;
+  --surfaceContainerHighestDark: #3D322F;
+
+  --primaryDark: #FFB59C;
+  --onPrimaryDark: #55200C;
+
+  --secondaryDark: #E7BDB0;
+  --onSecondaryDark: #442A21;
+  --secondaryContainerDark: #5D4036;
+  --onSecondaryContainerDark: #FFDBCF;
+
+  --onSurfaceDark: #F1DFD9;
+  --outlineVariantDark: #53433F;
+
+  --accentHueLight: 15;
+  --accentSaturationLight: 46%;
+  --accentLightnessLight: 38%;
+
+  --accentHueDark: 15;
+  --accentSaturationDark: 100%;
+  --accentLightnessDark: 81%;
+
+  --backgroundLight-78: rgba(255, 248, 246, 0.4706);
+  --backgroundDark-78: rgba(26, 17, 15, 0.4706);
+  --surfaceContainerLowLight-88: rgba(255, 241, 237, 0.5333);
+  --surfaceContainerLowDark-88: rgba(35, 25, 23, 0.5333);
+}
+
+/* ===== Material Discord theme vars ===== */
+.theme-light {
+  --main-color: var(--backgroundLight-78);
+  --main-alt: var(--surfaceContainerLowLight-88);
+
+  --accent-secondary-color: var(--secondaryLight);
+  --accent-secondary-text-color: var(--onSecondaryLight);
+
+  --message-color: transparent;
+  --message-color-hover: var(--surfaceContainerLight);
+  --message-color-alt: var(--surfaceContainerLight);
+
+  --attachment-color: var(--backgroundLight);
+
+  --accent-hue: var(--accentHueLight);
+  --accent-saturation: var(--accentSaturationLight);
+  --accent-lightness: var(--accentLightnessLight);
+  --accent-text-color: var(--onPrimaryLight);
+
+  --main-textarea-color: var(--surfaceContainerHighLight);
+  --main-textarea-color-alt: var(--surfaceContainerHighestLight);
+
+  --status-picker-color: var(--surfaceContainerHighLight);
+
+  --popout-color: var(--surfaceContainerLight);
+  --popout-color-alt: var(--surfaceContainerLowestLight);
+  --popout-header-border: var(--onSurfaceLight);
+
+  --separator-color: var(--outlineVariantLight);
+  --sidebar-panel-color: var(--surfaceContainerLowestLight);
+
+  --server-color: transparent;
+
+  --tooltip-color: var(--surfaceContainerLight);
+  --tooltip-text-color: var(--onSurfaceLight);
+}
+
+.theme-dark {
+  --main-color: var(--backgroundDark-78);
+  --main-alt: var(--surfaceContainerLowDark-88);
+
+  --accent-secondary-color: var(--secondaryDark);
+  --accent-secondary-text-color: var(--onSecondaryDark);
+
+  --message-color: transparent;
+  --message-color-hover: var(--surfaceContainerDark);
+  --message-color-alt: var(--surfaceContainerDark);
+
+  --attachment-color: var(--backgroundDark);
+
+  --accent-hue: var(--accentHueDark);
+  --accent-saturation: var(--accentSaturationDark);
+  --accent-lightness: var(--accentLightnessDark);
+  --accent-text-color: var(--onPrimaryDark);
+
+  --main-textarea-color: var(--surfaceContainerHighDark);
+  --main-textarea-color-alt: var(--surfaceContainerHighestDark);
+
+  --status-picker-color: var(--surfaceContainerHighDark);
+
+  --popout-color: var(--surfaceContainerDark);
+  --popout-color-alt: var(--surfaceContainerLowestDark);
+  --popout-header-border: var(--onSurfaceDark);
+
+  --separator-color: var(--outlineVariantDark);
+  --sidebar-panel-color: var(--surfaceContainerLowestDark);
+
+  --server-color: transparent;
+
+  --tooltip-color: var(--surfaceContainerDark);
+  --tooltip-text-color: var(--onSurfaceDark);
+}
+
+/* ===== Taken from HyprYou Project ===== */
+
+/* Selected channel background */
+.theme-light [class*="wrapper_"][class*="modeSelected_"] [class*="link_"] { background-color: var(--secondaryContainerLight); }
+.theme-dark  [class*="wrapper_"][class*="modeSelected_"] [class*="link_"] { background-color: var(--secondaryContainerDark); }
+
+/* Connected voice channel name color */
+.theme-light :where(.visual-refresh) [class*="modeConnected_"] [class*="name_"],
+.theme-light :where(.visual-refresh) [class*="modeConnected_"]:hover [class*="name_"] { color: var(--onSecondaryContainerLight); }
+.theme-dark :where(.visual-refresh) [class*="modeConnected_"] [class*="name_"],
+.theme-dark :where(.visual-refresh) [class*="modeConnected_"]:hover [class*="name_"] { color: var(--onSecondaryContainerDark); }
+
+/* Sidebar settings selected item */
+.theme-light [class*="sidebar_"] [class*="item_"][class*="selected_"] {
+  background-color: var(--secondaryContainerLight) !important;
+  color: var(--onSecondaryContainerLight) !important;
+}
+.theme-dark [class*="sidebar_"] [class*="item_"][class*="selected_"] {
+  background-color: var(--secondaryContainerDark) !important;
+  color: var(--onSecondaryContainerDark) !important;
+}
+
+/* Channel list selected item */
+.theme-light [class*="channel_"] [class*="interactive_"][class*="selected_"] {
+  background-color: var(--secondaryContainerLight) !important;
+  color: var(--onSecondaryContainerLight) !important;
+}
+.theme-dark [class*="channel_"] [class*="interactive_"][class*="selected_"] {
+  background-color: var(--secondaryContainerDark) !important;
+  color: var(--onSecondaryContainerDark) !important;
+}
+
+/* Bot tag icon fill */
+.theme-light [class*="botTag_"] svg path { fill: var(--onPrimaryLight); }
+.theme-dark  [class*="botTag_"] svg path { fill: var(--onPrimaryDark); }
+
+/* Small tweaks */
+[class*="repliedTextContent_"] { padding: 0px 5px !important; }
+[class*="userPopoutOuter_"] { border-radius: 16px !important; }
